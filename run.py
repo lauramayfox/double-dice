@@ -1,3 +1,10 @@
+import random
+
+# pypi.org colorama article on adding color to the terminal
+import colorama
+colorama.init(autoreset = True)
+
+# Love Sandwiches walk-through on APIs
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -15,5 +22,3 @@ SHEET = GSPREAD_CLIENT.open('double_dice')
 score = SHEET.worksheet('score')
 
 data = score.get_all_values()
-
-print(data)
