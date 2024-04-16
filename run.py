@@ -63,8 +63,25 @@ def get_player_name():
         else:
             print("Not a valid input, please try again")
 
-            
+
+def start_game(player):
+    """
+    A function to check if user is ready to start the game
+    """
+    while True:
+        start_answer = input("Start new game select y or n: ")
+
+        if start_answer == "y":
+            print("\033[31m" + "\n Let's Roll...")     
+            break
+        elif start_answer == "n":
+            print("\033[31m" + "See you on the next roll!") 
+        else:
+            print("\nPlease answer y or n: \n")
+        
+
 def main():
     player = welcome_msg()
+    start_game(player)
 
 main()
