@@ -66,6 +66,23 @@ def get_player_name():
         else:
             print("Not a valid input, please try again")
 
+def view_scoreboard():
+    """
+    A function to view previous high scores
+    """
+    while True:
+        view_scoreboard = input("Would you like to view previous highest score? y/n: ")
+
+        if view_scoreboard == "y":
+            print("Your highest score is: ", load_high_score())
+            time.sleep(1)     
+            break
+        elif view_scoreboard == "n":
+            break
+            main() 
+        else:
+            print("\nNot a valid input. Please answer y or n: \n")
+
 
 def start_game(player):
     """
@@ -107,6 +124,7 @@ def play_game(player):
             print("\033[31m" + "See you on the next roll!")
             print(f"Your total score this game: {score}")
             save_high_score(score)
+            quit()
 
 
 # Adaption from Quora q&a on scoreboard trackers
