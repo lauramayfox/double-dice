@@ -97,6 +97,26 @@ def play_game(player):
     else:
         print("\033[31m" + "Keep trying")
 
+    roll_again = input("Roll the dice again? y/n: ")
+        if roll_again == "n":
+            print("\033[31m" + "See you on the next roll!")
+            print(f"Your total score this game: {score}")
+
+
+# Adaption from Quora q&a on scoreboard trackers
+
+def save_high_score(score):
+"""
+Saves the highest scores to an external google spreadsheet file
+"""
+    with open(SHEET.worksheet('score'), "w") as file:
+        file.write(str(score))
+
+
+def load_high_score():
+    """ 
+    Gives an option to view previous high scores when game starts
+    """
 
 
 def main():
