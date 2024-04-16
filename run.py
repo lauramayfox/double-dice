@@ -91,6 +91,11 @@ def play_game(player):
         print("Dice 1: ", dice1)
         print("Dice 2: ", dice2)
 
+    if dice1 == dice2:
+        print("\033[32m" + "You rolled a double! YOU WIN!")     
+        
+    else:
+        print("\033[31m" + "Keep trying")
 
 
 
