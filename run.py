@@ -79,9 +79,27 @@ def start_game(player):
         else:
             print("\nPlease answer y or n: \n")
         
+def play_game(player):
+    roll_again = "y"
+    
+    while roll_again == "y":
+        print("Rolling the dice...")
+
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+        print("The values are: ")
+        print("Dice 1: ", dice1)
+        print("Dice 2: ", dice2)
+
+
+
 
 def main():
+    """
+    Sequence of events for the game play
+    """
     player = welcome_msg()
     start_game(player)
+    play_game(player)
 
 main()
