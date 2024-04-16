@@ -1,4 +1,6 @@
 import random
+import time
+import os
 
 # pypi.org colorama article on adding color to the terminal
 import colorama
@@ -42,6 +44,7 @@ def welcome_msg():
     player = get_player_name()
 
     print(f"\nAlright, {player}, the rules of the game are:")
+    time.sleep(1)
     print(
         """
         The aim is to roll 2 of the same numbers...
@@ -72,7 +75,8 @@ def start_game(player):
         start_answer = input("Start new game select y or n: ")
 
         if start_answer == "y":
-            print("\033[31m" + "\n Let's Roll...")     
+            print("\033[31m" + "\n Let's Roll...")
+            time.sleep(1)     
             break
         elif start_answer == "n":
             print("\033[31m" + "See you on the next roll!") 
@@ -84,6 +88,7 @@ def play_game(player):
     
     while roll_again == "y":
         print("Rolling the dice...")
+        time.sleep(1)
 
         dice1 = random.randint(1, 6)
         dice2 = random.randint(1, 6)
