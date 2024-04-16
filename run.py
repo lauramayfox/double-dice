@@ -28,12 +28,14 @@ def welcome_msg():
     """
     A welcome message to greet the player and explain the rules.
     """
-    print("")
-    print("")
-    print("")
-    print("")
+    print("\033[31m" + "┌ ─  - ┐  ┌ ─  - ┐")
+    print("\033[31m" + "| ●    |  | ●    |")
+    print("\033[31m" + "|    ● |  |    ● |")
+    print("\033[31m" + "└ - -  ┘  └ - -  ┘")
     print("*** Welcome To ***")
-    print(" ___           _    _       ___  _       ")
-    print("|   \ ___ _  _| |__| |___  |   \(_)__ ___ ")
-    print("| |) / _ | || | '_ | / -_) | |) | / _/ -_)")
-    print("|___/\___/\_,_|_.__|_\___| |___/|_\__\___|")
+    print("Double Dice")
+    print("\033[31m" + "┌ ─  - ┐  ┌ ─  - ┐")
+    print("\033[31m" + "| ●    |  | ●    |")
+    print("\033[31m" + "|    ● |  |    ● |")
+    print("\033[31m" + "└ - -  ┘  └ - -  ┘\n")
+        
