@@ -137,7 +137,7 @@ def save_high_score(score):
     """
     Saves the highest scores to an external google spreadsheet file
     """
-    with open(SHEET.worksheet('score'), "w") as file:
+    with open("score", "w") as file:
         file.write(str(score))
 
 
@@ -145,8 +145,8 @@ def load_high_score():
     """ 
     Gives an option to view previous high scores when game starts
     """
-    if os.path.exists(SHEET.worksheet('score')):
-        with open("SHEET.worksheet('score')", "r") as file:
+    if os.path.exists("score"):
+        with open("score", "r") as file:
             return int(file.read())
     else:
         return 0
