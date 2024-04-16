@@ -1,32 +1,101 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"><img src="assets/images/"/></h1>
 
-Welcome,
+# Double Dice
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Portfolio Project 3 - Python
 
-## Reminders
+ <a href ="https://" target="_blank">Double Dice live link</a>
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+<h1 align="center"><img src="assets/images/"/></h1>
 
-## Creating the Heroku app
+# Planning
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Target Audience
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Web Owner Goals
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
----
+<h1 align="center"><img src="/assets/images/"/></h1>
 
-Happy coding!
+
+
+## Research
+
+
+# Features
+
+
+## ASCII Art
+
+
+
+
+
+
+
+## Navigation
+
+
+
+# Features Left To Implement
+
+
+# Testing
+
+
+## Validator Testing
+
+## Python Code:
+The initial validator testing showed issue with my section for the imagery on the cards. I went back and updated the section to a div, and it now is passing validation.
+<h1 align="center"><img src="/assets/images/"/></h1>
+
+## CSS:
+
+The CSS passed validation.
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+
+
+
+
+# Bugs/Errors or Issues Encountered
+
+
+# Deployment
+
+The site was deployed to GitHub pages - <a href ="https://" target="_blank">Live Link</a>
+
+## Steps To Deployment
+
+
+
+# Credits 
+
+## Content
+
+- Python tutorials followed/adapted from via <a href="https:// " target="_blank"> YouTube</a>
+- Javascript tutorial followed/adapted <a href="https://www.youtube.com/watch?v=xWdkt6KSirw" target="_blank">Javascript Academy YouTube</a>
+- General source: <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+- General source: <a href="https://www.geeksforgeeks.org" target="_blank">Geeks For Geeks</a>
+- General source: <a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a>
+
+
+## Formatting
+
+- Python formatting tool: <a href="https://codebeautify.org/python-formatter-beautifier" target="_blank">Code Beautify</a>
+
+
+## Media:
+
+- ASCII Art:
+
