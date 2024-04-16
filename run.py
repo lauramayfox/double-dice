@@ -6,6 +6,8 @@ import os
 import colorama
 colorama.init(autoreset = True)
 
+# ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
+
 # Love Sandwiches walk-through on APIs
 import gspread
 from google.oauth2.service_account import Credentials

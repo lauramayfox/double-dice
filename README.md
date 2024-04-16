@@ -53,20 +53,6 @@
 The initial validator testing showed issue with my section for the imagery on the cards. I went back and updated the section to a div, and it now is passing validation.
 <h1 align="center"><img src="/assets/images/"/></h1>
 
-## CSS:
-
-The CSS passed validation.
-<p>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!" />
-    </a>
-</p>
-
-
-
-
 
 # Bugs/Errors or Issues Encountered
 
@@ -83,9 +69,8 @@ The site was deployed to GitHub pages - <a href ="https://" target="_blank">Live
 
 ## Content
 
-- Python tutorials followed/adapted from via <a href="https:// " target="_blank"> YouTube</a>
-- Javascript tutorial followed/adapted <a href="https://www.youtube.com/watch?v=xWdkt6KSirw" target="_blank">Javascript Academy YouTube</a>
-- General source: <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+- Python tutorial inspired from <a href="https://www.youtube.com/watch?v=x-Ag2_bJ40Y&t=466s" target="_blank"> YouTube Bro Code Dice Roller Program</a>
+- Python tutorial adapted from <a href="https://medium.com/@haseebzeeshan2010/multiple-dice-game-using-ascii-art-in-python-9f9ad4f63fd3" target="_blank">Medium blog on dice roll game</a>
 - General source: <a href="https://www.geeksforgeeks.org" target="_blank">Geeks For Geeks</a>
 - General source: <a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a>
 
@@ -97,5 +82,5 @@ The site was deployed to GitHub pages - <a href ="https://" target="_blank">Live
 
 ## Media:
 
-- ASCII Art:
+- ASCII Art: <a href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20"target="_blank">Ascii Art Generator</a>
 
