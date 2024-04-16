@@ -66,20 +66,22 @@ def get_player_name():
         else:
             print("Not a valid input, please try again")
 
-def view_scoreboard():
+def view_scoreboard(player):
     """
     A function to view previous high scores
     """
     while True:
-        view_scoreboard = input("Would you like to view previous highest score? y/n: ")
+
+        view_scoreboard = input(
+            "Would you like to view previous highest score? y or n: ")
 
         if view_scoreboard == "y":
-            print("Your highest score is: ", load_high_score())
-            time.sleep(1)     
+            print("Your highest score is:", load_high_score())
+            time.sleep(1)
             break
         elif view_scoreboard == "n":
             break
-            main() 
+            main()
         else:
             print("\nNot a valid input. Please answer y or n: \n")
 
@@ -97,6 +99,7 @@ def start_game(player):
             break
         elif start_answer == "n":
             print("\033[31m" + "See you on the next roll!") 
+            quit()
         else:
             print("\nPlease answer y or n: \n")
         
@@ -110,14 +113,14 @@ def play_game(player):
         dice1 = random.randint(1, 6)
         dice2 = random.randint(1, 6)
         print("The values are: ")
-        print("Dice 1: ", dice1)
-        print("Dice 2: ", dice2)
+        print("Dice 1 = ", dice1)
+        print("Dice 2 = ", dice2)
 
-    if dice1 == dice2:
-        print("\033[32m" + "You rolled a double! YOU WIN!")     
-        score += 1
-    else:
-        print("\033[31m" + "Keep trying")
+        if dice1 == dice2:
+            print("\033[32m" + "You rolled a double! You win!")
+            score += 1
+        else:
+            print("\033[31m" + "Keep trying")
 
         roll_again = input("Roll the dice again? y or n: \n")
         if roll_again == "n":
@@ -125,6 +128,7 @@ def play_game(player):
             print(f"Your total score this game: {score}")
             save_high_score(score)
             quit()
+
 
 
 # Adaption from Quora q&a on scoreboard trackers
@@ -152,6 +156,7 @@ def main():
     Sequence of events for the game play
     """
     player = welcome_msg()
+    view_scoreboard(player)
     start_game(player)
     play_game(player)
     load_high_score()
