@@ -62,7 +62,7 @@ def get_player_name():
     """
 
     while True:
-        name = input("What is your name?: ")
+        name = input("What is your name?:\n")
         if name.isalpha():
             return name
         else:
@@ -75,7 +75,7 @@ def view_scoreboard(player):
     while True:
 
         view_scoreboard = input(
-            "Would you like to view previous highest score? y or n: ")
+            "Would you like to view previous highest score? y or n:\n")
 
         if view_scoreboard == "y":
             print("Your highest score is:", load_high_score())
@@ -93,7 +93,7 @@ def start_game(player):
     A function to check if user is ready to start the game
     """
     while True:
-        start_answer = input("Start new game select y or n: ")
+        start_answer = input("Start new game select y or n:\n")
 
         if start_answer == "y":
             print("\033[31m" + "\n Let's Roll...")
