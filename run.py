@@ -50,8 +50,20 @@ def welcome_msg():
         """)
     return player
 
+def get_player_name():
+    """
+    A function to get the player's name and
+    ensure only letters used.
+    """
 
+    while True:
+        name = input("What is your name?: ")
+        if name.isalpha():
+            return name
+        else:
+            print("Not a valid input, please try again")
 
+            
 def main():
     player = welcome_msg()
 
