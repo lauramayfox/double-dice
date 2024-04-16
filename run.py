@@ -38,4 +38,21 @@ def welcome_msg():
     print("\033[31m" + "| ●    |  | ●    |")
     print("\033[31m" + "|    ● |  |    ● |")
     print("\033[31m" + "└ - -  ┘  └ - -  ┘\n")
-        
+
+    player = get_player_name()
+
+    print(f"\nAlright, {player}, the rules of the game are:")
+    print(
+        """
+        The aim is to roll 2 of the same numbers...
+        Double or nothing...
+        Try to beat your highest score!
+        """)
+    return player
+
+
+
+def main():
+    player = welcome_msg()
+
+main()
