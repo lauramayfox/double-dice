@@ -82,5 +82,5 @@ The site was deployed to GitHub pages - <a href ="https://" target="_blank">Live
 
 ## Media:
 
-- ASCII Art: <a href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20"target="_blank">Ascii Art Generator</a>
+- ASCII Art: <a href="https://patorjk.com/software" target="_blank">Ascii Art Generator</a>
 
