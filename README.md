@@ -53,16 +53,33 @@
 The initial validator testing showed issue with my section for the imagery on the cards. I went back and updated the section to a div, and it now is passing validation.
 <h1 align="center"><img src="/assets/images/"/></h1>
 
+## Python libraries
+
 
 # Bugs/Errors or Issues Encountered
 
 
 # Deployment
 
-The site was deployed to GitHub pages - <a href ="https://" target="_blank">Live Link</a>
+This project was developed through Gitpod (template by Code Institute).
+The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</a>
 
 ## Steps To Deployment
 
+- Log in or register a new account on Heroku.
+- Click on 'New' in the dashboard, then select 'Create New App'.
+- Select a suitable app name that is available and choose your region.
+- Click on 'Create app'.
+- Once created, choose Settings.
+- As per Code Institute guidelines, add Config Var with Key = PORT and the Value = 8000.
+- Add buildpacks: Python and Nodejs, in this specific order.
+- Select 'Deploy' and select 'GitHub'.
+- Select 'Connect to GitHub'.
+- Search for your project GitHub repository name.
+- Select 'Connect'.
+- Select 'Deploy Branch'.
+- If steps are taken correctly, the message should state "The app was successfully deployed" when the app is built with python and all the depencencies.
+- You can click the 'view' button to view the live link site.
 
 
 # Credits 
