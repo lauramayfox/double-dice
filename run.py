@@ -2,16 +2,16 @@ import random
 import time
 import os
 
-# Love Sandwiches walk-through on APIs
-import gspread
-from google.oauth2.service_account import Credentials
-
 # pypi.org colorama article on adding color to the terminal
 import colorama
 
 colorama.init(autoreset=True)
 
 # ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
+
+# Love Sandwiches walk-through on APIs
+import gspread
+from google.oauth2.service_account import Credentials
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",

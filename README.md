@@ -39,21 +39,13 @@ The aim of the game is to roll a double, and to try and beat the high score trac
 
 
 
-
-
-## Navigation
-
-
-
-# Features Left To Implement
-
-
 # Testing
 
 
 ## Validator Testing
 
 ## PEP8 Testing
+PEP8 testing was done using the Code Institute Python Linter.
 <h1 align="center"><img src="/assets/images/pep8.jpg"/></h1>
 
 ## Python libraries
@@ -75,6 +67,15 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 
 ## Steps To Deployment
 
+## Credentials & Google Sheets
+- Make a copy of the Google sheet for this game <a href ="https://docs.google.com/spreadsheets/d/1Si_b5sxEleqx4J-tKZkqhL6v2lEsdA4Tp2kw4fLhRxk/edit#gid=0" target="_blank">here.</a>
+- Create a new project on Google Could Platform and enable the Google Drive API.
+- Create your credentials for accessing the application data.
+- Grant permissions of 'Editor'
+- Create new service account 'JSON'.
+- Copy the email address under Service Accounts and add this as an Editor to your copy of the Google sheet.
+
+## Heroku
 - Log in or register a new account on Heroku.
 - Click on 'New' in the dashboard, then select 'Create New App'.
 - Select a suitable app name that is available and choose your region.
@@ -92,7 +93,7 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 
 <h1 align="center"><img src="/assets/images/heroku.jpg"/></h1>
 
-# Credits 
+# Credits & Acknowledgements
 
 ## Content
 
@@ -102,9 +103,10 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 - General source: <a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a>
 
 
-## Formatting
+## Formatting & Validating Tools
 
 - Python formatting tool: <a href="https://codebeautify.org/python-formatter-beautifier" target="_blank">Code Beautify</a>
+- Code Institute Python Linter: <a href="https://pep8ci.herokuapp.com/#" target="_blank">PEP8</a>
 
 
 ## Media:
