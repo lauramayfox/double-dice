@@ -1,4 +1,4 @@
-<h1 align="center"><img src="assets/images/"/></h1>
+<h1 align="center"><img src="assets/images/responsive.jpg"/></h1>
 
 # Double Dice
 
@@ -26,8 +26,11 @@
 ## Research
 
 
-# Features
+# Existing Features
 
+## Welcome message
+
+<img src="/assets/images/welcome.jpg">
 
 ## ASCII Art
 
