@@ -2,28 +2,29 @@ import random
 import time
 import os
 
-# pypi.org colorama article on adding color to the terminal
-import colorama
-colorama.init(autoreset = True)
-
-# ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
-
 # Love Sandwiches walk-through on APIs
 import gspread
 from google.oauth2.service_account import Credentials
 
+# pypi.org colorama article on adding color to the terminal
+import colorama
+
+colorama.init(autoreset=True)
+
+# ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
+    "https://www.googleapis.com/auth/drive",
+]
 
-CREDS = Credentials.from_service_account_file('creds.json')
+CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('double_dice')
+SHEET = GSPREAD_CLIENT.open("double_dice")
 
-score = SHEET.worksheet('score')
+score = SHEET.worksheet("score")
 
 data = score.get_all_values()
 
@@ -41,6 +42,7 @@ def welcome_msg():
     print("|   \ ___ _  _| |__| |___  |   \(_)__ ___")
     print("| |) / _ | || | '_ | / -_) | |) | / _/ -_)")
     print("|___/\___/\_,_|_.__|_\___| |___/|_\__\___|")
+    print("")
     print("\033[31m" + "┌ ─  - ┐  ┌ ─  - ┐")
     print("\033[31m" + "| ●    |  | ●    |")
     print("\033[31m" + "|    ● |  |    ● |")
@@ -55,8 +57,10 @@ def welcome_msg():
         The aim is to roll 2 of the same numbers...
         Double or nothing...
         Try to beat your highest score!
-        """)
+        """
+    )
     return player
+
 
 def get_player_name():
     """
@@ -71,6 +75,7 @@ def get_player_name():
         else:
             print("Not a valid input, please try again")
 
+
 def view_scoreboard(player):
     """
     A function to view previous high scores
@@ -78,10 +83,11 @@ def view_scoreboard(player):
     while True:
 
         view_scoreboard = input(
-            "Would you like to view previous highest score? y or n:\n")
+            "Would you like to view previous highest score? y or n:\n"
+        )
 
         if view_scoreboard == "y":
-            print("Your highest score is:", load_high_score())
+            print("The previous highest score is:", load_high_score())
             time.sleep(1)
             break
         elif view_scoreboard == "n":
@@ -100,14 +106,15 @@ def start_game(player):
 
         if start_answer == "y":
             print("\033[31m" + "\n Let's Roll...")
-            time.sleep(1)     
+            time.sleep(1)
             break
         elif start_answer == "n":
-            print("\033[31m" + "See you on the next roll!") 
+            print("\033[31m" + "See you on the next roll!")
             quit()
         else:
             print("\nPlease answer y or n: \n")
-        
+
+
 def play_game(player):
     roll_again = "y"
     score = 0
@@ -135,8 +142,8 @@ def play_game(player):
             quit()
 
 
-
 # Adaption from Quora q&a on scoreboard trackers
+
 
 def save_high_score(score):
     """
@@ -147,7 +154,7 @@ def save_high_score(score):
 
 
 def load_high_score():
-    """ 
+    """
     Gives an option to view previous high scores when game starts
     """
     if os.path.exists("score"):
@@ -155,6 +162,7 @@ def load_high_score():
             return int(file.read())
     else:
         return 0
+
 
 def main():
     """
@@ -165,5 +173,6 @@ def main():
     start_game(player)
     play_game(player)
     load_high_score()
+
 
 main()

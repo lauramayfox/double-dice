@@ -4,9 +4,10 @@
 
 ## Portfolio Project 3 - Python
 
- <a href ="https://" target="_blank">Double Dice live link</a>
+I have created a fun and easy dice roll game inspired by my own personal love of dice, and also taking inspiration from the very old school Vegas gaming screens you see in the older casinos. 
+<br>
+The aim of the game is to roll a double, and to try and beat the high score tracker. The project can be trialed and played on the mock terminal via Heroku: <a href ="https://https://double-dice-20fa2b8b4398.herokuapp.com/" target="_blank">Double Dice live link</a>
 
-<h1 align="center"><img src="assets/images/"/></h1>
 
 # Planning
 
@@ -34,7 +35,7 @@
 
 ## ASCII Art
 
-
+<img src="/assets/images/asciiart.jpg">
 
 
 
@@ -52,15 +53,20 @@
 
 ## Validator Testing
 
-## Python Code:
-The initial validator testing showed issue with my section for the imagery on the cards. I went back and updated the section to a div, and it now is passing validation.
-<h1 align="center"><img src="/assets/images/"/></h1>
+## PEP8 Testing
+<h1 align="center"><img src="/assets/images/pep8.jpg"/></h1>
 
 ## Python libraries
 
 
 # Bugs/Errors or Issues Encountered
+- I had a small bug during the initial build, which created an infinate loop when rolling the dice. I managed to fix it simply by restarting the game running sequence with the 'main' function.
+- I had a issue with the scoring system in that I wasn't sure if I wanted to keep the highest score unique to the player, or to track a highest score in general for whoever has played the game. I feel like this is something to work on in future versions of the game.
 
+# Features left to implement
+
+- As mentioned above, I would like to implement on the highest score feature and add a scoreboard that tracks usernames and their scores so that the player can try make it onto the leaderboard.
+- I would like to create an alternative game option to play in real time against the computer where you try to beat the computer's score in each round.
 
 # Deployment
 
@@ -84,6 +90,7 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 - If steps are taken correctly, the message should state "The app was successfully deployed" when the app is built with python and all the depencencies.
 - You can click the 'view' button to view the live link site.
 
+<h1 align="center"><img src="/assets/images/heroku.jpg"/></h1>
 
 # Credits 
 
