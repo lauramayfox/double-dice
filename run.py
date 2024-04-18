@@ -5,10 +5,6 @@ import os
 # pypi.org colorama article on adding color to the terminal
 import colorama
 
-colorama.init(autoreset=True)
-
-# ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
-
 # Love Sandwiches walk-through on APIs
 import gspread
 from google.oauth2.service_account import Credentials
@@ -25,6 +21,10 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("double_dice")
 
 SCORE_SHEET = SHEET.worksheet("score")
+
+colorama.init(autoreset=True)
+
+# ● ┌ ─ ┐ │ └ ┘ Dice pieces for welcome message
 
 
 def welcome_msg():
