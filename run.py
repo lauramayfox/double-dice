@@ -14,9 +14,9 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive",
+  "https://www.googleapis.com/auth/spreadsheets",
+  "https://www.googleapis.com/auth/drive.file",
+  "https://www.googleapis.com/auth/drive",
 ]
 
 CREDS = Credentials.from_service_account_file("creds.json")
@@ -24,9 +24,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("double_dice")
 
-score = SHEET.worksheet("score")
-
-data = score.get_all_values()
+SCORE_SHEET = SHEET.worksheet("score")
 
 
 def welcome_msg():
@@ -56,6 +54,7 @@ def welcome_msg():
         """
         The aim is to roll 2 of the same numbers...
         Double or nothing...
+        1 point per double..
         Try to beat your highest score!
         """
     )
@@ -81,7 +80,6 @@ def view_scoreboard(player):
     A function to view previous high scores
     """
     while True:
-
         view_scoreboard = input(
             "Would you like to view previous highest score? y or n:\n"
         )
@@ -94,7 +92,7 @@ def view_scoreboard(player):
             break
             main()
         else:
-            print("\nNot a valid input. Please answer y or n: \n")
+            print("\nNot a valid input. Please answer y or n \n")
 
 
 def start_game(player):
@@ -112,10 +110,13 @@ def start_game(player):
             print("\033[31m" + "See you on the next roll!")
             quit()
         else:
-            print("\nPlease answer y or n: \n")
+            print("\nPlease answer y or n \n")
 
 
 def play_game(player):
+    """
+    A function for the main game component
+    """
     roll_again = "y"
     score = 0
     while roll_again == "y":
@@ -138,30 +139,35 @@ def play_game(player):
         if roll_again == "n":
             print("\033[31m" + "See you on the next roll!")
             print(f"Your total score this game: {score}")
-            save_high_score(score)
             quit()
+        elif roll_again != "y" or "n":
+            print("\nPlease answer y or n \n")
 
 
-# Adaption from Quora q&a on scoreboard trackers
 
+            
+            
 
-def save_high_score(score):
-    """
-    Saves the highest scores to an external google spreadsheet file
-    """
-    with open("score", "w") as file:
-        file.write(str(score))
+   
 
 
 def load_high_score():
-    """
-    Gives an option to view previous high scores when game starts
-    """
-    if os.path.exists("score"):
-        with open("score", "r") as file:
-            return int(file.read())
-    else:
-        return 0
+  """
+  Gives an option to view previous high scores when game starts
+  """
+  all_values = SCORE_SHEET.get_all_values()
+  return all_values[0]
+
+def save_high_score(new_score):
+  """
+  Saves the highest scores to an external google spreadsheet file
+  if it is greater than the high score in the document
+  """
+  current_high_score = load_high_score()
+
+  if new_score > current_high_score:
+    SCORE_SHEET.update("A1", [new_score])
+    return
 
 
 def main():
