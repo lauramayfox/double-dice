@@ -13,9 +13,22 @@ The aim of the game is to roll a double, and to try and beat the high score trac
 
 ## Target Audience
 
+The target audience for this project is designed for all ages, but the concept was inspired by old school game face machines that you see in Vegas. I believe ultimately I would like to develop this game or a game similar for an older audience when it comes to implementing future features into the game. 
+
+## User Goals
+As a player I want..<br>
+- To have fun and be challenged to beat the high score tracker
+- To understand the rules of the game clearly
+- To be offered a chance to continue with play, or to exit as they wish
+- To easily navigate the game and ease of access to inputs
+- To be able to view their score after each game has ended
+- To want to return to play the game again to try and beat the high score
 
 ## Web Owner Goals
-
+As a web owner I want..<br>
+- To have a clear and easy game with little to no negative feedback from a game player
+- To maintain a highest score feature easily, no matter how many deployed versions of the game there are
+- The overall game to have no errors or bugs
 
 
 
@@ -31,6 +44,9 @@ The aim of the game is to roll a double, and to try and beat the high score trac
 
 ## Welcome message
 
+I wanted to incorporate some design elements to the Heroku terminal project to make it more interesting for the game player. I used ascii art that I made myself (the dice), along with ascii art I found through an ascii art online generator.
+The initial landing page shows pairs of dice to give the player a visual idea of what the game is about. 
+
 <img src="/assets/images/welcome.jpg">
 
 ## ASCII Art
@@ -42,14 +58,40 @@ The aim of the game is to roll a double, and to try and beat the high score trac
 # Testing
 
 
+# Manual Testing
+
+## "What Is Your Name" input
+- Entering input name correctly with letters
+- Entering nothing
+- Entering a non-alpha character such as a number
+## "Would you like to view previous highest score" input
+- Entering input correctly with 'y' or 'n'
+- Entering nothing
+- Entering a non-alpha character such as a number
+## "Start new game select y or n" input
+- Entering input correctly with 'y' or 'n'
+- Entering nothing
+- Entering a non-alpha character such as a number
+## "Roll the dice again? y or n" input
+
+
 ## Validator Testing
 
 ## PEP8 Testing
-PEP8 testing was done using the Code Institute Python Linter.
+PEP8 testing was done using the Code Institute Python Linter. The test results display errors relating to the ascii art in the welcome message display. I have left these errors as they aren't affecting the code, and they are intentional for the purpose of the message display. All other testing came back without errors otherwise.
 <h1 align="center"><img src="/assets/images/pep8.jpg"/></h1>
+
+## User Testing
+
+I have had friends and family testing out the game for me within a 2 week span, taking note of their feedback and any issues encountered. Any bugs found during user testing have been logged, below, in the bug/errors section. My mentor also carried out user testing for me to ensure the project runs smoothly on the Heroku deployed terminal.
 
 ## Python libraries
 
+- random: To randomly select the dice numbers upon each roll
+- os: Used for its clear tool
+- time: To allow short time break intervals where allocated as a pause
+- gspread: To pull and push the high score from google spreadsheet to the game
+- colorama: To use color in the terminal for the welcome message and alerts for each roll result
 
 # Bugs/Errors or Issues Encountered
 - I had a small bug during the initial build, which created an infinate loop when rolling the dice. I managed to fix it simply by restarting the game running sequence with the 'main' function.
