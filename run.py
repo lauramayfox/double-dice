@@ -1,11 +1,8 @@
 import random
 import time
 import os
-
 # pypi.org colorama article on adding color to the terminal
 import colorama
-
-# Love Sandwiches walk-through on APIs
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -180,6 +177,7 @@ def main():
     view_scoreboard(player)
     start_game(player)
     play_game(player)
+    save_high_score(new_score)
     load_high_score()
 
 
