@@ -90,7 +90,7 @@ def view_scoreboard(player):
             break
             main()
         else:
-            print("\nNot a valid input. Please answer y or n \n")
+            print("\nNot a valid input. Please select y or n \n")
 
 
 def start_game(player):
@@ -109,6 +109,7 @@ def start_game(player):
             quit()
         else:
             print("\nPlease answer y or n \n")
+
 
 def play_game(player):
     """
@@ -133,18 +134,15 @@ def play_game(player):
             print("\033[31m" + "Keep trying")
 
         roll_again = input("Roll the dice again? y or n: \n")
-        if roll_again == "n":
-            print("\033[31m" + "See you on the next roll!")
-            print(f"Your total score this game: {score}")
-            save_high_score(score)
-            quit()
-        elif roll_again == "y":
-            play_game(player)
-        else:
-            print("\nNot a valid input. Continuing with game.. \n")
-            time.sleep(1)
-            break
+        while roll_again.lower() not in ("y", "n"):
+            print("\nNot a valid input. Please select y or n\n")
+            roll_again = input("Roll the dice again? y or n: \n")
 
+    if roll_again == "n":
+        print("\033[31m" + "See you on the next roll!")
+        print(f"Your total score this game: {score}")
+        save_high_score(score)
+        quit()
 
 
 def load_high_score():
@@ -183,4 +181,3 @@ def main():
 
 
 main()
-

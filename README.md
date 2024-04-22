@@ -55,36 +55,36 @@ The initial landing page shows pairs of dice to give the player a visual idea of
 # Testing
 
 
-# Manual Testing
+## Manual Testing
 
 "What Is Your Name" input
 - Entering input name correctly with letters
 - Entering nothing
-- Entering a non-alpha character such as a number
+- Entering a non-alpha character such as a number<br>
 Result: "Not a valid input, please try again"
 
 "Would you like to view previous highest score" input
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
-- Entering a non-alpha character such as a number
+- Entering a non-alpha character such as a number<br>
 Result: "Not a valid input. Please answer y or n"
 
 "Start new game select y or n" input
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
-- Entering a non-alpha character such as a number
+- Entering a non-alpha character such as a number<br>
 Result: "Please answer y or n"
 
 "Roll the dice again? y or n" input
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
-- Entering a non-alpha character such as a number
+- Entering a non-alpha character such as a number<br>
 Result: "Not a valid input. Continuing with game.."
 
 
 ## Validator Testing
 
-## PEP8 Testing
+## PEP8
 PEP8 testing was done using the Code Institute Python Linter. The test results display errors relating to the ascii art in the welcome message display. I have left these errors as they aren't affecting the code, and they are intentional for the purpose of the message display. All other testing came back without errors otherwise.
 <h1 align="center"><img src="/assets/images/pep8.jpg"/></h1>
 
@@ -165,5 +165,5 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 
 ## Acknowledgements
 
-Thanks to my mentor, Excellence Ilesanmi, who helped guide me through each step of the building process of my game from idea to inception. A special thanks to the Code Institute tutor service team, notibly Roo and Rebecca for their great help for when bug issues arose within my project towards the completion phase.
+Thanks to my mentor, Excellence Ilesanmi, who helped guide me through each step of the building process of my game from idea to inception. A special thanks to the Code Institute tutor service team, with a special mention to Roo and Thomas for their great help for when bug issues arose within my project towards the completion phase.
 
