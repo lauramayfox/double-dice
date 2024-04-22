@@ -136,37 +136,35 @@ def play_game(player):
         if roll_again == "n":
             print("\033[31m" + "See you on the next roll!")
             print(f"Your total score this game: {score}")
+            save_high_score(score)
             quit()
-        elif roll_again != "y" or "n":
-            print("\nPlease answer y or n \n")
 
 
 
-
-
+ 
             
-            
-
-   
-
-
 def load_high_score():
-  """
-  Gives an option to view previous high scores when game starts
-  """
-  all_values = SCORE_SHEET.get_all_values()
-  return all_values[0]
+    """
+    Gives an option to view previous high scores when game starts
+    """
+    try:
+        return int(SCORE_SHEET.acell('A1').value)
+    except ValueError:
+        print("Warning: Unable to convert high score to an integer.")
+        return 0
+
 
 def save_high_score(new_score):
-  """
-  Saves the highest scores to an external google spreadsheet file
-  if it is greater than the high score in the document
-  """
-  current_high_score = load_high_score()
+    """
+    Saves the highest scores to an external google spreadsheet file
+    if it is greater than the high score in the document
+    """
+    current_high_score = load_high_score()
 
-  if new_score > current_high_score:
-    SCORE_SHEET.update("A1", [new_score])
-    return
+    if new_score > current_high_score:
+        SCORE_SHEET.update("A1", [[new_score]])
+        print("Congratulations! New high score saved.")
+
 
 
 def main():
@@ -176,9 +174,12 @@ def main():
     player = welcome_msg()
     view_scoreboard(player)
     start_game(player)
+    load_high_score()
     play_game(player)
     save_high_score(new_score)
-    load_high_score()
+    
+    
+    
 
 
 main()
