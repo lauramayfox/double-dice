@@ -164,7 +164,7 @@ def save_high_score(new_score):
     current_high_score = load_high_score()
 
     if new_score > current_high_score:
-        SCORE_SHEET.update("A1", [[new_score]])
+        SCORE_SHEET.update(range_name="A1", values=[[new_score]])
         print("Congratulations! New high score saved.")
 
 
