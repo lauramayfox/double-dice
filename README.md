@@ -57,19 +57,29 @@ The initial landing page shows pairs of dice to give the player a visual idea of
 
 # Manual Testing
 
-## "What Is Your Name" input
+"What Is Your Name" input
 - Entering input name correctly with letters
 - Entering nothing
 - Entering a non-alpha character such as a number
-## "Would you like to view previous highest score" input
+Result: "Not a valid input, please try again"
+
+"Would you like to view previous highest score" input
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
 - Entering a non-alpha character such as a number
-## "Start new game select y or n" input
+Result: "Not a valid input. Please answer y or n"
+
+"Start new game select y or n" input
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
 - Entering a non-alpha character such as a number
-## "Roll the dice again? y or n" input
+Result: "Please answer y or n"
+
+"Roll the dice again? y or n" input
+- Entering input correctly with 'y' or 'n'
+- Entering nothing
+- Entering a non-alpha character such as a number
+Result: "Not a valid input. Continuing with game.."
 
 
 ## Validator Testing
@@ -93,6 +103,7 @@ I have had friends and family testing out the game for me within a 2 week span, 
 # Bugs/Errors or Issues Encountered
 - I had a small bug during the initial build, which created an infinate loop when rolling the dice. I managed to fix it simply by restarting the game running sequence with the 'main' function.
 - I had a issue with the scoring system in that I wasn't sure if I wanted to keep the highest score unique to the player, or to track a highest score in general for whoever has played the game. I feel like this is something to work on in future versions of the game.
+- I had a bug issue in relation to the score data being pushed to my Google API. It was a minor coding error, yet significant in terms of the running of the game and score tracking. The CI tutor support services helped me out with finding the issue within my code to help make it work in tune with the running of the game.
 
 # Features left to implement
 
@@ -148,7 +159,11 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 - Code Institute Python Linter: <a href="https://pep8ci.herokuapp.com/#" target="_blank">PEP8</a>
 
 
-## Media:
+## Media
 
 - ASCII Art: <a href="https://patorjk.com/software" target="_blank">Ascii Art Generator</a>
+
+## Acknowledgements
+
+Thanks to my mentor, Excellence Ilesanmi, who helped guide me through each step of the building process of my game from idea to inception. A special thanks to the Code Institute tutor service team, notibly Roo and Rebecca for their great help for when bug issues arose within my project towards the completion phase.
 
