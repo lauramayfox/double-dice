@@ -1,15 +1,16 @@
 import random
 import time
 import os
+
 # pypi.org colorama article on adding color to the terminal
 import colorama
 import gspread
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
-  "https://www.googleapis.com/auth/spreadsheets",
-  "https://www.googleapis.com/auth/drive.file",
-  "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
 ]
 
 CREDS = Credentials.from_service_account_file("creds.json")
@@ -140,15 +141,12 @@ def play_game(player):
             quit()
 
 
-
- 
-            
 def load_high_score():
     """
     Gives an option to view previous high scores when game starts
     """
     try:
-        return int(SCORE_SHEET.acell('A1').value)
+        return int(SCORE_SHEET.acell("A1").value)
     except ValueError:
         print("Warning: Unable to convert high score to an integer.")
         return 0
@@ -166,7 +164,6 @@ def save_high_score(new_score):
         print("Congratulations! New high score saved.")
 
 
-
 def main():
     """
     Sequence of events for the game play
@@ -177,9 +174,7 @@ def main():
     load_high_score()
     play_game(player)
     save_high_score(new_score)
-    
-    
-    
 
 
 main()
+
