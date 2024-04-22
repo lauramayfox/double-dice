@@ -143,38 +143,8 @@ def play_game(player):
         else:
             print("\nNot a valid input. Continuing with game.. \n")
             time.sleep(1)
-            return
+            break
 
-
-
-# def play_game(player):
-   # """
-   # A function for the main game component
-   # """
-   # roll_again = "y"
-   # score = 0
-   # while roll_again == "y":
-      #  print("Rolling the dice...")
-       # time.sleep(1)
-
-       # dice1 = random.randint(1, 6)
-       # dice2 = random.randint(1, 6)
-       # print("The values are: ")
-       # print("Dice 1 = ", dice1)
-       # print("Dice 2 = ", dice2)
-
-       # if dice1 == dice2:
-       #     print("\033[32m" + "You rolled a double! You win!")
-       #     score += 1
-       # else:
-       #     print("\033[31m" + "Keep trying")
-
-       # roll_again = input("Roll the dice again? y or n: \n")
-       # if roll_again == "n":
-       #     print("\033[31m" + "See you on the next roll!")
-       #     print(f"Your total score this game: {score}")
-       #     save_high_score(score)
-       #     quit()
 
 
 def load_high_score():

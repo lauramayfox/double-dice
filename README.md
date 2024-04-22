@@ -32,12 +32,9 @@ As a web owner I want..<br>
 
 
 
-
-<h1 align="center"><img src="/assets/images/"/></h1>
-
-
-
 ## Research
+
+I conducted my research by looking up online games involving dice, mainly on Youtube. I watched real life dice games, as well as automated versions on Python programming. 
 
 
 # Existing Features
