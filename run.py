@@ -83,7 +83,7 @@ def view_scoreboard(player):
         )
 
         if view_scoreboard == "y":
-            print("The previous highest score is:", load_high_score())
+            print("The previous highest score of all time is:", load_high_score())
             time.sleep(1)
             break
         elif view_scoreboard == "n":

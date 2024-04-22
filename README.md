@@ -50,6 +50,11 @@ The initial landing page shows pairs of dice to give the player a visual idea of
 
 <img src="/assets/images/asciiart.jpg">
 
+## Game Play
+
+I chose to use color throughout the game to indicate whether the player has rolled a double by displaying green, or if it's not a double, red. The user plays for as long as they wish, with an exit option at any stage throughout the game play. If the player hits a new high score of all time, a message will display at the end of the game to indicate they have achieved a new high score.
+<img src="/assets/images/gameplay.jpg">
+
 
 
 # Testing
@@ -79,7 +84,7 @@ Result: "Please answer y or n"
 - Entering input correctly with 'y' or 'n'
 - Entering nothing
 - Entering a non-alpha character such as a number<br>
-Result: "Not a valid input. Continuing with game.."
+Result: "Not a valid input. Please select y or n"
 
 
 ## Validator Testing
