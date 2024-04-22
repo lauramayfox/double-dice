@@ -31,11 +31,13 @@ As a web owner I want..<br>
 - The overall game to have no errors or bugs
 
 
-
 ## Research
 
 I conducted my research by looking up online games involving dice, mainly on Youtube. I watched real life dice games, as well as automated versions on Python programming. 
 
+## Flow Chart
+To give an indication of how the game flow will work for the player's game journey.
+<h1 align="center"><img src="/assets/images/flowchart.jpg"/></h1>
 
 # Existing Features
 
@@ -55,10 +57,12 @@ The initial landing page shows pairs of dice to give the player a visual idea of
 I chose to use color throughout the game to indicate whether the player has rolled a double by displaying green, or if it's not a double, red. The user plays for as long as they wish, with an exit option at any stage throughout the game play. If the player hits a new high score of all time, a message will display at the end of the game to indicate they have achieved a new high score.
 <img src="/assets/images/gameplay.jpg">
 
+## Google Sheet
+
+The highest score data is saved externally to this google sheet <a href="https://docs.google.com/spreadsheets/d/1Si_b5sxEleqx4J-tKZkqhL6v2lEsdA4Tp2kw4fLhRxk/edit#gid=0" target="_blank">here.</a> This updates whenever a player beats the current highest score set by any player of the game.
 
 
 # Testing
-
 
 ## Manual Testing
 
