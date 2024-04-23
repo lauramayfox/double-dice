@@ -157,6 +157,7 @@ The site was deployed via <a href ="https://heroku.com" target="_blank">Heroku</
 ## Content
 
 - Python tutorial inspired from <a href="https://www.youtube.com/watch?v=x-Ag2_bJ40Y&t=466s" target="_blank"> YouTube Bro Code Dice Roller Program</a>
+- Python tutorial adaption/inspired from <a href="https://www.youtube.com/watch?v=iML5uTNCTOI&t=21s" target="_blank"> YouTube Christopher Long Dice Game Tutorial</a>
 - Python tutorial adapted from <a href="https://medium.com/@haseebzeeshan2010/multiple-dice-game-using-ascii-art-in-python-9f9ad4f63fd3" target="_blank">Medium blog on dice roll game</a>
 - General source: <a href="https://www.geeksforgeeks.org" target="_blank">Geeks For Geeks</a>
 - General source: <a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a>

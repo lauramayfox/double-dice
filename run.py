@@ -1,3 +1,4 @@
+# Imports
 import random
 import time
 import os
@@ -7,6 +8,7 @@ import colorama
 import gspread
 from google.oauth2.service_account import Credentials
 
+# Variables for gspread
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -111,6 +113,7 @@ def start_game(player):
             print("\nPlease answer y or n \n")
 
 
+# Christopher Long Youtube dice game inspiration/adaptation
 def play_game(player):
     """
     A function for the main game component
